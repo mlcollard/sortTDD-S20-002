@@ -10,5 +10,16 @@
 
 int main() {
 
+    {
+        std::vector<int> v;
+        assert(v.size() == 0);
+        assert(v.empty());
+
+        sort(v);
+
+        assert(v.size() == 0);
+        assert(v.empty());
+    }
+
     return 0;
 }
