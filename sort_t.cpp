@@ -38,5 +38,22 @@ int main() {
         assert(!v.empty());
     }
 
+    {
+        std::vector<int> v{ 3, 2, 1 };
+        assert(v.size() == 3);
+        assert(!v.empty());
+        assert(v[0] == 3);
+        assert(v[1] == 2);
+        assert(v[2] == 1);
+
+        sort(v);
+
+        assert(v[0] == 1);
+        assert(v[1] == 2);
+        assert(v[2] == 3);
+        assert(v.size() == 3);
+        assert(!v.empty());
+    }
+
     return 0;
 }
